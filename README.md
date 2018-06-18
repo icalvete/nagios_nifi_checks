@@ -8,7 +8,7 @@ Susscesfull messages
 Check if queuedCount from last status history item is greater than a threshold
 
 ```bash
-Usage: setup_with_schedule.rb [options]
+Usage: nifi_successful_check.rb [options]
   -m, --mode MODE                  [ http | https ]
   -s, --server SERVER              nifi.my.org
   -p, --port PORT                  9443
@@ -21,7 +21,7 @@ Usage: setup_with_schedule.rb [options]
 ```
 
 ```bash
- ./nifi_susscesfull_check.rb -i 103e129b-1d51-1cb9-b465-787fe022168e -t 720 -c /opt/nifi/secure/admin-cert.pem -k /opt/nifi/secure/admin-private-key.pem -m https -s connect-prod-1.hmobile-servers.com -p 9443
+ ./nifi_successful_check.rb -i 103e129b-1d51-1cb9-b465-787fe022168e -t 720 -c /opt/nifi/secure/admin-cert.pem -k /opt/nifi/secure/admin-private-key.pem -m https -s connect-prod-1.hmobile-servers.com -p 9443
  No messages in the last 720 minutes
 ```
 
@@ -30,7 +30,7 @@ Failed messages
 Check if there is an increment in queuedCount from an interval (From now to threshold in minutes ).
 
 ```bash
-Usage: setup_with_schedule.rb [options]
+Usage: nifi_failed_check.rb [options]
   -m, --mode MODE                  [ http | https ]
   -s, --server SERVER              nifi.my.org
   -p, --port PORT                  9443
