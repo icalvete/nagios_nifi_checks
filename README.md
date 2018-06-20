@@ -45,5 +45,6 @@ Usage: nifi_failed_check.rb [options]
 
 ```bash
 ./nifi_failed_check.rb -i 103e129c-1d51-1cb9-9552-bb35180e8824 -t 3 -c /opt/nifi/secure/admin-cert.pem -k /opt/nifi/secure/admin-private-key.pem -m https -s connect-prod-1.hmobile-servers.com -p 9443
+No faliled messages
 ```
 
