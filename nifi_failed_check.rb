@@ -69,14 +69,14 @@ if options[:verbose]
 end
 
 if queued_count > options[:threshold] * 2
-  puts "#{queued_count} faliled messages (threshold: #{options[:threshold]})"
+  puts "#{queued_count} failed messages (threshold: #{options[:threshold]})"
   exit CRITICAL
 end
 
 if queued_count > options[:threshold]
-  puts "#{queued_count} faliled messages (threshold: #{options[:threshold]})"
+  puts "#{queued_count} failed messages (threshold: #{options[:threshold]})"
   exit WARNING
 end
 
-  puts "No faliled messages"
+  puts "No failed messages"
 exit OK

@@ -60,6 +60,12 @@ nifi_client.set_debug true
 
 history = nifi_client.get_conection_status_history(options[:id])
 history_items = history['statusHistory']['aggregateSnapshots']
+
+if options[:threshold].to_i > history_items.count
+  puts "No enough statusHistory (#{history_items.count}) to this threshold (#{options[:threshold]})."
+  exit WARNING
+end
+
 queued_count = history_items.last['statusMetrics']['queuedCount'] - history_items[-(options[:threshold].to_i)]['statusMetrics']['queuedCount']
 
 if options[:verbose]
